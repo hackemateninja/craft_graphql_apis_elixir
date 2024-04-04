@@ -37,21 +37,6 @@ defmodule PlateSlate.MenuFixtures do
   end
 
   @doc """
-  Generate a itemtag.
-  """
-  def itemtag_fixture(attrs \\ %{}) do
-    {:ok, itemtag} =
-      attrs
-      |> Enum.into(%{
-        description: "some description",
-        name: "some name"
-      })
-      |> PlateSlate.Menu.create_itemtag()
-
-    itemtag
-  end
-
-  @doc """
   Generate a tag.
   """
   def tag_fixture(attrs \\ %{}) do
@@ -72,9 +57,7 @@ defmodule PlateSlate.MenuFixtures do
   def item_tag_fixture(attrs \\ %{}) do
     {:ok, item_tag} =
       attrs
-      |> Enum.into(%{
-
-      })
+      |> Enum.into(%{})
       |> PlateSlate.Menu.create_item_tag()
 
     item_tag

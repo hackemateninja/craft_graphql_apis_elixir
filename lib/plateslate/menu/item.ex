@@ -17,6 +17,6 @@ defmodule PlateSlate.Menu.Item do
   def changeset(item, attrs) do
     item
     |> cast(attrs, [:added_on, :description, :name, :price])
-    |> validate_required([:added_on, :description, :name, :price])
+    |> validate_required([:name, :price])
   end
 end
